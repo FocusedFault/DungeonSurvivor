@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuwkgaghjeupq"]
+
+[ext_resource type="AudioStream" uid="uid://bgh3wop331b2j" path="res://assets/audio/BouchedagLoopable.mp3" id="1_firyk"]
+
+[sub_resource type="GDScript" id="GDScript_0y15a"]
+script/source = "extends AudioStreamPlayer
+"
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_firyk")
+volume_db = -15.0
+autoplay = true
+bus = &"music"
+script = SubResource("GDScript_0y15a")
